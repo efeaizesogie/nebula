@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nebula — DeFi staking, launching soon</title>
+  <meta name="description" content="Nebula is a non-custodial DeFi staking platform for investors. Auto-compounding vaults, scored validators and liquid receipts. Join the waitlist.">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 1. Navigation -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="logo" href="#top" aria-label="Nebula home">
+        <span class="logo__frame" aria-hidden="true"></span>
+        <span class="logo__word">Nebula</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#orbit">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#proof">Beta</a>
+        <a href="#waitlist">Waitlist</a>
+      </nav>
+      <a class="btn btn--primary btn--sm nav__cta magnetic" href="#hero-form">Join the waitlist</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-sheet" aria-label="Open menu">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div class="sheet" id="menu-sheet" hidden>
+      <nav aria-label="Mobile">
+        <a href="#orbit">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#proof">Beta</a>
+        <a href="#waitlist">Waitlist</a>
+      </nav>
+      <a class="btn btn--primary btn--block" href="#hero-form">Join the waitlist</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero — Waitlist Teaser -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="ambient" aria-hidden="true">
+        <video class="ambient__video" muted loop playsinline preload="none"
+               poster="assets/vid-01-poster.jpg" data-src="assets/vid-01.mp4"></video>
+        <div class="ambient__overlay"></div>
+      </div>
+      <div class="container hero__inner">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span>Coming soon</p>
+        <h1 class="display hero__title" id="hero-title">Yield that <span class="hl">orbits</span> you</h1>
+        <p class="lead">Non-custodial staking across six proof-of-stake networks. Rewards compound daily, validators are scored in public, and you can exit without waiting out a lock-up.</p>
+
+        <div class="waitlist" data-waitlist>
+          <form class="waitlist__form" id="hero-form" novalidate>
+            <label class="sr-only" for="hero-email">Email address</label>
+            <input class="input" id="hero-email" name="email" type="email" autocomplete="email" placeholder="you@fund.com" required>
+            <button class="btn btn--primary magnetic" type="submit">Join the waitlist</button>
+            <p class="waitlist__error" role="alert" hidden>Enter a valid email address.</p>
+          </form>
+          <div class="waitlist__success" hidden>
+            <p class="waitlist__done">You're in. Move up the queue by sharing your link:</p>
+            <div class="referral">
+              <label class="sr-only" for="hero-ref">Your referral link</label>
+              <input class="input input--mono" id="hero-ref" type="text" readonly data-ref-input>
+              <button class="btn btn--ghost" type="button" data-copy>Copy link</button>
+            </div>
+          </div>
+          <p class="queue mono" aria-live="polite"><span data-queue-label><span data-live-count>2,847</span> people ahead of you</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 3D moment — Orbital Scene -->
+    <section class="orbit" id="orbit" aria-labelledby="orbit-title">
+      <div class="orbit__sticky">
+        <div class="container orbit__inner">
+          <h2 class="display h2" id="orbit-title">Stake in <span class="hl">orbit</span></h2>
+          <div class="orbit__stage">
+            <canvas class="orbit__canvas" aria-hidden="true"></canvas>
+            <video class="orbit__video" muted loop playsinline preload="none"
+                   poster="assets/vid-02-poster.jpg" data-src="assets/vid-02.mp4"
+                   aria-label="A dark sphere with a glowing lime seam, slowly turning among floating particles" hidden></video>
+          </div>
+          <ol class="orbit__stats" aria-label="Nebula at launch">
+            <li class="stat is-active"><span class="stat__num mono">06</span><span class="stat__text">Networks at launch: Ethereum, Solana, Cosmos Hub, Polkadot, Avalanche and Celestia.</span></li>
+            <li class="stat"><span class="stat__num mono">24h</span><span class="stat__text">Rewards are claimed and restaked every day, with no manual harvesting.</span></li>
+            <li class="stat"><span class="stat__num mono">0</span><span class="stat__text">Days of lock-up on liquid vaults. Swap your receipt token out whenever you choose.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Features — Glow Cards -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 class="display h2 center" id="features-title">Built for<br>patient <span class="hl">capital</span></h2>
+        <div class="cards">
+          <article class="card glow">
+            <img class="card__art" src="assets/img-01-1.jpg" alt="Abstract render of a dark matte cube with glowing lime orbit lines coiled inside" loading="lazy" width="1200" height="896">
+            <svg class="icon card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+            <h3 class="card__title">Auto-compounding vaults</h3>
+            <p class="card__text">Each vault claims rewards daily and restakes them, so your position grows without a single extra transaction from you.</p>
+          </article>
+          <article class="card glow">
+            <img class="card__art" src="assets/img-01-2.jpg" alt="Abstract render of a glossy black sphere wrapped in silver and lime orbit rings" loading="lazy" width="1200" height="896">
+            <svg class="icon card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <h3 class="card__title">Scored validators</h3>
+            <p class="card__text">We rank validators on uptime, commission history and slashing record, and publish every score so you can check our picks.</p>
+          </article>
+          <article class="card glow">
+            <img class="card__art" src="assets/img-01-3.jpg" alt="Abstract render of three stacked matte capsules joined by a glowing lime thread" loading="lazy" width="1200" height="896">
+            <svg class="icon card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>
+            <h3 class="card__title">Liquid receipts</h3>
+            <p class="card__text">Staked assets mint an nb-token one to one, which you can hold, trade or post as collateral while the stake keeps earning.</p>
+          </article>
+          <article class="card glow">
+            <img class="card__art" src="assets/img-01-4.jpg" alt="Abstract render of a faceted black hexagonal crystal with a lime thread running through it" loading="lazy" width="1200" height="896">
+            <svg class="icon card__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <h3 class="card__title">Keys stay yours</h3>
+            <p class="card__text">Nebula never holds your funds. You sign every deposit and withdrawal from your own wallet, and contracts are audited before mainnet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Proof -->
+    <section class="section" id="proof" aria-labelledby="proof-title">
+      <div class="container">
+        <h2 class="display h2 center" id="proof-title">The <span class="hl">beta</span> so far</h2>
+        <dl class="numbers">
+          <div class="number"><dt class="number__label">Staked in private beta</dt><dd class="number__value mono">$<span data-count="4.2" data-decimals="1">0</span>M</dd></div>
+          <div class="number"><dt class="number__label">Beta wallets</dt><dd class="number__value mono"><span data-count="1180">0</span></dd></div>
+          <div class="number"><dt class="number__label">Validator uptime</dt><dd class="number__value mono"><span data-count="99.97" data-decimals="2">0</span>%</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 6. Call to action — Waitlist with Live Count -->
+    <section class="cta" id="waitlist" aria-labelledby="cta-title">
+      <div class="ambient" aria-hidden="true">
+        <video class="ambient__video" muted loop playsinline preload="none"
+               poster="assets/vid-01-poster.jpg" data-src="assets/vid-01.mp4"></video>
+        <div class="ambient__overlay"></div>
+      </div>
+      <div class="container cta__inner">
+        <h2 class="display h2" id="cta-title">Get in before <span class="hl">launch</span></h2>
+        <p class="lead">Waitlist members get first access to vaults and a lower performance fee for their first year.</p>
+        <div class="waitlist" data-waitlist>
+          <form class="waitlist__form" novalidate>
+            <label class="sr-only" for="cta-email">Email address</label>
+            <input class="input" id="cta-email" name="email" type="email" autocomplete="email" placeholder="you@fund.com" required>
+            <button class="btn btn--primary magnetic" type="submit">Join the waitlist</button>
+            <p class="waitlist__error" role="alert" hidden>Enter a valid email address.</p>
+          </form>
+          <div class="waitlist__success" hidden>
+            <p class="waitlist__done">You're on the list. Share your link to move up:</p>
+            <div class="referral">
+              <label class="sr-only" for="cta-ref">Your referral link</label>
+              <input class="input input--mono" id="cta-ref" type="text" readonly data-ref-input>
+              <button class="btn btn--ghost" type="button" data-copy>Copy link</button>
+            </div>
+          </div>
+        </div>
+        <div class="signups">
+          <div class="avatars" aria-hidden="true">
+            <span>MK</span><span>AO</span><span>JR</span><span>LT</span><span>SD</span>
+          </div>
+          <p class="mono"><span data-live-count>2,847</span> investors have signed up</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Footer — Minimal One-liner -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Nebula Labs</span>
+      <a href="#privacy">Privacy</a>
+      <a href="#x" aria-label="Nebula on X">X / Twitter</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=4" defer></script>
+</body>
+</html>
